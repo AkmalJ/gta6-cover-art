@@ -18,6 +18,7 @@ export const GRADES = {
   neon: { label: 'Neon Nights' },
   golden: { label: 'Golden Hour' },
   midnight: { label: 'Midnight Chrome' },
+  emerald: { label: 'Emerald Dusk' },
 };
 
 /** Panel polygons for a layout, as [x, y] points in unit space (multiply by W and H). */
@@ -127,6 +128,11 @@ const GRADE_WASH = {
     stops: [[0, 'rgba(4, 10, 34, 0.58)'], [0.55, 'rgba(38, 64, 140, 0.18)'], [1, 'rgba(148, 178, 255, 0.34)']],
     glow: 'rgba(140, 170, 255, 0.15)',
     empty: ['#0a1434', '#33509c'],
+  },
+  emerald: {
+    stops: [[0, 'rgba(3, 30, 22, 0.55)'], [0.42, 'rgba(6, 84, 62, 0.2)'], [0.72, 'rgba(16, 148, 102, 0.14)'], [1, 'rgba(214, 178, 74, 0.42)']],
+    glow: 'rgba(64, 220, 160, 0.16)',
+    empty: ['#06392a', '#8a6d1f'],
   },
 };
 
