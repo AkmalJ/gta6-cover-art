@@ -19,6 +19,7 @@ import { buildDossier } from './vendor/makefun-app.ts';
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const SHOT_CAP = 262144; // 256 KiB per screenshot, the scorer's own limit
+const ENTRY_VERSION = 'v2 — gate-compliant screenshots, five grades';
 
 // --- Completeness check: name what is missing rather than handing in a hollow package. ---
 const problems: string[] = [];
@@ -55,4 +56,4 @@ writeFileSync(
   }),
 );
 
-console.log(`Vice Panels handed in: app/ + ${shotFacts.length} screenshots (${shotFacts.join(', ')}) + dossier.json -> ${out}`);
+console.log(`Vice Panels handed in (${ENTRY_VERSION}): app/ + ${shotFacts.length} screenshots (${shotFacts.join(', ')}) + dossier.json -> ${out}`);

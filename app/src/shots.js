@@ -8,7 +8,7 @@
 const CROPS = [
   { zoom: 1.12, x: 0, y: 0 },
   { zoom: 1.22, x: -0.3, y: 0.12 },
-  { zoom: 1.3, x: 0.55, y: -0.05 },
+  { zoom: 1.27, x: 0.55, y: -0.05 },
   { zoom: 1.16, x: 0, y: -0.4 },
 ];
 
@@ -25,7 +25,9 @@ export async function runShot(shot, query, api) {
   if (shot === 'cover') {
     document.body.classList.add('shot-cover');
     state.layout = query.get('layout') || 'triptych';
-    state.grade = query.get('grade') || 'sunset';
+    // Hero covers (the 4-cover scene) fall back to the newest grade, Emerald Dusk,
+    // when the query names no grade of its own.
+    state.grade = query.get('grade') || (state.layout === 'hero' ? 'emerald' : 'sunset');
     state.caption = query.get('caption') || '';
     state.subtitle = query.get('subtitle') || '';
     const names = (query.get('photos') || 'pier,boulevard,pier').split(',');

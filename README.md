@@ -38,6 +38,11 @@ pick a layout and grade, type your caption, and press **Export PNG**.
 covers from this app plus the editor with sample photos loaded; the scenes are defined in
 `shots.json` and staged by `app/src/shots.js`.
 
+## v2
+
+The fifth colour grade, Emerald Dusk, joins the original four. All screenshots were
+re-captured inside the submission gate: at most 256 KiB each, long side at most 1280 px.
+
 ## License
 
 MIT — see `LICENSE`. The sample photos in `app/samples/` were made for make.fun and are free to use.

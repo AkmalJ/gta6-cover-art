@@ -15,7 +15,7 @@ const SIZES = {
 
 export const state = {
   layout: 'triptych',
-  grade: 'sunset',
+  grade: 'emerald',
   caption: 'VICE HEAT',
   subtitle: 'ONE LAST SCORE',
   size: '1080x1080',
