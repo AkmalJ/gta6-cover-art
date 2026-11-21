@@ -12,6 +12,14 @@ const CROPS = [
   { zoom: 1.16, x: 0, y: -0.4 },
 ];
 
+// The hero layout's panels are wide and short, so a centred crop lands on shoulders and
+// torsos; these crops ride up toward the faces instead.
+const HERO_CROPS = [
+  { zoom: 1.02, x: 0, y: 0.52 },
+  { zoom: 1.05, x: 0, y: 0.6 },
+  { zoom: 1.1, x: 0.2, y: 0.35 },
+];
+
 export async function runShot(shot, query, api) {
   const { state, loadSample, redrawAt, redraw, paintSlots, photos } = api;
   if (shot === 'cover') {
@@ -21,10 +29,11 @@ export async function runShot(shot, query, api) {
     state.caption = query.get('caption') || '';
     state.subtitle = query.get('subtitle') || '';
     const names = (query.get('photos') || 'pier,boulevard,pier').split(',');
+    const crops = state.layout === 'hero' ? HERO_CROPS : CROPS;
     for (let i = 0; i < state.panels.length; i++) {
       const img = await loadSample(names[i % names.length]);
       state.panels[i].img = img;
-      Object.assign(state.panels[i], CROPS[i]);
+      Object.assign(state.panels[i], crops[i % crops.length]);
     }
     redrawAt(window.innerWidth, window.innerHeight);
   } else {
