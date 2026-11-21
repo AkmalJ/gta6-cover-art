@@ -1,5 +1,1 @@
-[
-  { "name": "1-cover.jpg", "query": "?shot=cover&photo=pier&caption=Sunset%20Heist", "w": 1080, "h": 1080 },
-  { "name": "2-editor.jpg", "query": "?shot=editor&photo=boulevard&caption=Boulevard%20Queen", "w": 1280, "h": 720 },
-  { "name": "3-cover.jpg", "query": "?shot=cover&photo=boulevard&caption=Boulevard%20Queen", "w": 1080, "h": 1080 }
-]
+[{"h":1080,"name":"1-cover.jpg","query":"?shot=cover&layout=triptych&grade=sunset&photos=pier,boulevard,pier&caption=VICE%20HEAT&subtitle=ONE%20LAST%20SCORE","w":1080},{"h":720,"name":"2-editor.jpg","query":"?shot=editor","w":1280},{"h":1350,"name":"3-cover.jpg","query":"?shot=cover&layout=triptych&grade=neon&photos=boulevard,pier,boulevard&caption=NEON%20CONFESSIONS&subtitle=AFTER%20MIDNIGHT","w":1080},{"h":1080,"name":"4-cover.jpg","query":"?shot=cover&layout=hero&grade=golden&photos=pier,boulevard,pier&caption=PALM%20CITY%20HEAT&subtitle=NO%20BRAKES","w":1920}]
